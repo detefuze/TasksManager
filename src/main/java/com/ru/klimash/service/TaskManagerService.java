@@ -11,5 +11,6 @@ public interface TaskManagerService {
     @Transactional
     void create_task(Task my_task) throws ExistingTaskException;
 
-    void delete_task(String my_title) throws NotExistingTaskException;
+    @Transactional
+    void delete_task(Task my_task) throws NotExistingTaskException;
 }
